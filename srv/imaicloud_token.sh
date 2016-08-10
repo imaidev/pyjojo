@@ -9,7 +9,7 @@
 # param: imaicloud_userid - 用户id，即租户在imaicloud.com的二级域名
 # filtered_param: pwd - provent print password to log
 # -- jojo --
+# expose IMAICLOUD_SECRET secret
 
-echo "jojo_return_value user=$USER"
-pwdfile=$(htpasswd -nb $USER $PWD); echo "jojo_return_value htpasswd=$pwdfile"
+md5=$(echo -n '$imaicloud_expires$imaicloud_userid$imaicloud_payload$imaicoud_role $IMAICLOUD_SECRET' | openssl md5 -binary | openssl base64 | tr +/ -_ | tr -d =); echo "jojo_return_value md5=$md5"
 exit 0
