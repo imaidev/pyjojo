@@ -3,9 +3,9 @@ This docker image package some linux uitls, and exposethese utils to http API us
 
 You can run this image use :
 ```
-docker run imaidev/pyjojo
+docker run imaidev/pyjojo-utils
 ```
-test ```/srv/htpasswd.sh```
+test ```/srv/htpasswd.sh```:
 ```
 curl -XPOST http://localhost:3000/scripts/htpasswd -H "Content-Type: application/json" -d '{"user": "webb","pwd": "123"}'
 ```
