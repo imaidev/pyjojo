@@ -1,5 +1,5 @@
-cd /srv/pyjojo/pyjojo-utils
-docker build pyjojo-utils .
-docker rm $(docker stop $(docker ps -a|grep pyjojo-utils|awk '{print $1}'))
-# docker rmi imaidev/pyjojo-utils
-docker run -p 3001:3000 pyjojo-utils
+#cd /srv/pyjojo/pyjojo-utils
+#docker build pyjojo-utils .
+docker rm $(docker stop $(docker ps -a|grep registry.cn-hangzhou.aliyuncs.com/imaidev/pyjojo-utils|awk '{print $1}'))
+docker rmi registry.cn-hangzhou.aliyuncs.com/imaidev/pyjojo-utils
+docker run -p 3001:3000 registry.cn-hangzhou.aliyuncs.com/imaidev/pyjojo-utils
