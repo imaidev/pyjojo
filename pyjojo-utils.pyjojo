@@ -1,3 +1,3 @@
 docker rm $(docker stop $(docker ps -a|grep imaidev/pyjojo-utils|awk '{print $1}'))
 docker rmi imaidev/pyjojo-utils
-docker run imaidev/pyjojo-utils
+docker run -p 3001:3000 imaidev/pyjojo-utils
