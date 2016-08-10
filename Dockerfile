@@ -1,4 +1,4 @@
-from lepinkainen/ubuntu-python-base:latest
+from python:2
 RUN apt-get -y update
 RUN pip install pyjojo 
 RUN apt-get -y install apache2-utils git && apt-get clean
