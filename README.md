@@ -10,4 +10,4 @@ test ```/srv/htpasswd.sh```:
 curl -XPOST http://localhost:3000/scripts/htpasswd -H "Content-Type: application/json" -d '{"user": "webb","pwd": "123"}'
 ```
 
-。。
+。
