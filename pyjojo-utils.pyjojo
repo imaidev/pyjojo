@@ -3,3 +3,5 @@ cd /srv/pyjojo/pyjojo-utils
 docker build -t pyjojo-utils .
 docker rm $(docker stop $(docker ps -a|grep pyjojo-utils|awk '{print $1}'))
 docker run -p 3001:3000 pyjojo-utils
+
+
